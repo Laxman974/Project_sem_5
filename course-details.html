@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKT - Course Details</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">SMKT</div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+                    <li><a href="signup.html" class="btn btn-primary">Sign Up</a></li>
+                </ul>
+                <div class="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <div class="container">
+            <section class="course-detail-section card" id="course-detail-content">
+                <!-- Course details will be dynamically loaded here -->
+                <h1 class="course-detail-title">Loading Course...</h1>
+                <p class="course-detail-description">Please wait while we fetch course details.</p>
+            </section>
+
+            <section class="course-features-section grid-2">
+                <div class="card">
+                    <h2>Your Progress</h2>
+                    <div class="progress-tracker">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 0%;"></div>
+                        </div>
+                        <p><span id="course-progress-percentage">0</span>% Complete</p>
+                        <button class="btn btn-primary" id="mark-complete-btn">Mark as Complete</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Quick Quiz</h2>
+                    <div class="quiz-container">
+                        <div id="quiz-question"></div>
+                        <div id="quiz-options" class="quiz-options"></div>
+                        <button class="btn btn-primary" id="quiz-submit-btn">Submit Answer</button>
+                        <div id="quiz-feedback"></div>
+                        <button class="btn btn-secondary" id="quiz-next-btn" style="display: none;">Next Question</button>
+                        <p id="quiz-score" style="display: none;">Score: <span id="current-score">0</span>/<span id="total-questions">0</span></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Flashcards</h2>
+                    <div class="flashcard-container">
+                        <div class="flashcard" id="flashcard">
+                            <div class="flashcard-front" id="flashcard-front">Click to reveal answer</div>
+                            <div class="flashcard-back" id="flashcard-back"></div>
+                        </div>
+                        <div class="flashcard-controls">
+                            <button class="btn btn-secondary" id="prev-flashcard-btn">Previous</button>
+                            <button class="btn btn-primary" id="next-flashcard-btn">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>SMKT</h3>
+                    <p>Your gateway to mastering new subjects and expanding your knowledge base.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="Facebook"></a>
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="Twitter"></a>
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@smkt.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <p>Address: 123 Knowledge St, Learning City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SMKT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container"></div>
+    <button id="scroll-to-top-btn" class="scroll-to-top-btn" title="Go to top">&#9650;</button>
+
+    <script src="data/courses.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

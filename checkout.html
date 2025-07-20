@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKT - Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">SMKT</div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+                    <li><a href="signup.html" class="btn btn-primary">Sign Up</a></li>
+                </ul>
+                <div class="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main auth-container">
+        <div class="card auth-card">
+            <h1 class="page-title">Checkout</h1>
+            <p class="page-subtitle">Enter your payment details.</p>
+
+            <form id="checkout-form">
+                <div class="input-group">
+                    <input type="text" id="card-name" name="card-name" placeholder=" " required>
+                    <label for="card-name">Name on Card</label>
+                    <span class="error-message"></span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="card-number" name="card-number" placeholder=" " required maxlength="19">
+                    <label for="card-number">Card Number</label>
+                    <span class="error-message"></span>
+                </div>
+                <div class="grid-2">
+                    <div class="input-group">
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required maxlength="5">
+                        <label for="expiry-date">Expiry Date</label>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cvv" name="cvv" placeholder=" " required maxlength="4">
+                        <label for="cvv">CVV</label>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Pay Now</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>SMKT</h3>
+                    <p>Your gateway to mastering new subjects and expanding your knowledge base.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="Facebook"></a>
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="Twitter"></a>
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@smkt.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <p>Address: 123 Knowledge St, Learning City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SMKT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container"></div>
+    <button id="scroll-to-top-btn" class="scroll-to-top-btn" title="Go to top">&#9650;</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKT - Books</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">SMKT</div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="books.html" class="active">Books</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+                    <li><a href="signup.html" class="btn btn-primary">Sign Up</a></li>
+                </ul>
+                <div class="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <div class="container">
+            <h1 class="page-title">Our Book Store</h1>
+            <p class="page-subtitle">Discover a curated collection of books to deepen your understanding.</p>
+
+            <section class="filter-section card">
+                <div class="input-group filter-search">
+                    <input type="text" id="book-search" placeholder=" " autocomplete="off">
+                    <label for="book-search">Search Books</label>
+                </div>
+                <div class="filter-group">
+                    <label for="book-category">Category:</label>
+                    <select id="book-category">
+                        <option value="all">All</option>
+                        <!-- Categories will be dynamically loaded here -->
+                    </select>
+                </div>
+            </section>
+
+            <section class="book-list grid-3" id="book-list">
+                <!-- Book cards will be dynamically loaded here -->
+            </section>
+
+            <p id="no-books-found" class="no-results-message" style="display: none;">No books found matching your criteria.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>SMKT</h3>
+                    <p>Your gateway to mastering new subjects and expanding your knowledge base.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="Facebook"></a>
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="Twitter"></a>
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@smkt.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <p>Address: 123 Knowledge St, Learning City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SMKT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container"></div>
+    <button id="scroll-to-top-btn" class="scroll-to-top-btn" title="Go to top">&#9650;</button>
+
+    <script src="data/books.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKT - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">SMKT</div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" id="logout-btn" class="btn btn-secondary">Logout</a></li>
+                </ul>
+                <div class="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <h1 class="dashboard-title">Welcome, <span id="dashboard-username">User</span>!</h1>
+            <p class="dashboard-subtitle">Here's a summary of your progress and activity.</p>
+
+            <section class="dashboard-stats grid-3">
+                <div class="card stat-card">
+                    <h3>Total Users</h3>
+                    <p id="total-users-stat" class="stat-value">0</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>Enrolled Courses</h3>
+                    <p id="enrolled-courses-stat" class="stat-value">0</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>Books in Cart</h3>
+                    <p id="books-in-cart-stat" class="stat-value">0</p>
+                </div>
+            </section>
+
+            <section class="dashboard-recent-activity">
+                <h2>Recent Activity</h2>
+                <div class="card">
+                    <ul id="recent-activity-list">
+                        <!-- Activity items will be dynamically loaded here -->
+                        <li>You enrolled in "Intro to Python".</li>
+                        <li>You completed "Module 1: Python Basics".</li>
+                        <li>You added "Learn Python" to your cart.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="dashboard-quick-links">
+                <h2>Quick Links</h2>
+                <div class="grid-2">
+                    <a href="courses.html" class="card quick-link-card">
+                        <h3>Browse Courses</h3>
+                        <p>Discover new subjects to learn.</p>
+                    </a>
+                    <a href="books.html" class="card quick-link-card">
+                        <h3>Explore Books</h3>
+                        <p>Find your next great read.</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>SMKT</h3>
+                    <p>Your gateway to mastering new subjects and expanding your knowledge base.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="Facebook"></a>
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="Twitter"></a>
+                        <a href="#"><img src="/placeholder.svg?height=24&width=24" alt="LinkedIn"></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@smkt.com</p>
+                    <p>Phone: +1 (123) 456-7890</p>
+                    <p>Address: 123 Knowledge St, Learning City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SMKT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container"></div>
+    <button id="scroll-to-top-btn" class="scroll-to-top-btn" title="Go to top">&#9650;</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
